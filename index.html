@@ -8,7 +8,31 @@
 </head>
 
 <body>
-    <script></script>
+    <h1 id="encabezado">FFF</h1>
+    <table>
+        <tr>
+            <td>a</td>
+            <td>b</td>
+            <td>c</td>
+            <td>d</td>
+        </tr>
+        <tr>
+            <td>a</td>
+            <td>b</td>
+            <td>c</td>
+            <td>d</td>
+        </tr>
+
+    </table>
+    <script>
+        // document.getElementById("encabezado").innerHTML = "texto cambiado";
+
+        console.log(document.querySelector("h1")); // si tenemos varios devuelve el primero
+        document.querySelector("h1").innerHTML = "cambio";
+
+        // document.querySelector("h1").outerHTML; para ver el contenido con etiqueta
+        // document.querySelectorAll()
+    </script>
 
 </body>
 

@@ -1,6 +1,5 @@
 const numeros = [1, 2, 3, 4];
 
-
 function traditional(numeros) {
     let numeroArray = []
     for (const e of numeros) {

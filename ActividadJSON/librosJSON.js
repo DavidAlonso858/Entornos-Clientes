@@ -13,7 +13,7 @@ let arrayLibros = [
         Genre: "Parody",
         Author: "Miguel de Cervantes",
         Pages: 1560,
-        Date: "16/01/1605",
+        Date: "16/01/1605", // "January 01, 1605"
         Read: true,
         Website: ""
     },
@@ -45,3 +45,6 @@ let arrayLibros = [
         Website: ""
     },
 ]
+arrayLibros.forEach(libro => {
+    console.log(libro);
+});

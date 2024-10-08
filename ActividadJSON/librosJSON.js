@@ -4,7 +4,7 @@ let arrayLibros = [
         Genre: "Poem",
         Author: "John Milton",
         Pages: 453,
-        Date: "10/05/1667",
+        Date: "May 10, 1667",
         Read: false,
         Website: ""
     },
@@ -13,7 +13,7 @@ let arrayLibros = [
         Genre: "Parody",
         Author: "Miguel de Cervantes",
         Pages: 1560,
-        Date: "16/01/1605", // "January 01, 1605"
+        Date: "January 16, 1605",
         Read: true,
         Website: ""
     },
@@ -22,7 +22,7 @@ let arrayLibros = [
         Genre: "Epic Science Fiction ",
         Author: "Frank Herbert",
         Pages: 784,
-        Date: "01/08/1965",
+        Date: "August 01, 1965",
         Read: true,
         Website: ""
     },
@@ -31,7 +31,7 @@ let arrayLibros = [
         Genre: "Dark Fantasy",
         Author: "Kentaro Miura",
         Pages: 8000,
-        Date: "26/11/1990",
+        Date: "November 26, 1990",
         Read: true,
         Website: ""
     },
@@ -40,7 +40,7 @@ let arrayLibros = [
         Genre: "Existentialism",
         Author: "Albert Camus",
         Pages: 159,
-        Date: "19/05/1942",
+        Date: "May 19, 1942",
         Read: false,
         Website: ""
     },

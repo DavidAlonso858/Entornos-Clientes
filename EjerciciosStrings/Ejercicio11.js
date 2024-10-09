@@ -3,9 +3,11 @@ function uncamelize(params, separador) {
     let reformado2 = "";
     let parar = false;
 
-    if (separador == null) {
-        separador = " ";
-    }
+    // if (separador == null) {
+    //     separador = " ";
+    // }
+
+    separador = separador || " "; // si no llega valor pilla el otro
 
     for (let index = 0; index < params.length && !parar; index++) {
         if (params[index] == params[index].toUpperCase()) {
@@ -15,7 +17,7 @@ function uncamelize(params, separador) {
         }
     }
     reformado2 = reformado2.toLowerCase();
-    let nuevoFormato = reformado + separador+reformado2;
+    let nuevoFormato = reformado + separador + reformado2;
 
     return nuevoFormato
 }

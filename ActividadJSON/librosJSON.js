@@ -100,6 +100,7 @@ document.querySelector(".boton1").addEventListener("click", function () {
     document.querySelector(".contenidoGeneros").innerHTML = nombraGeneros(arrayLibros)
 });
 
+//VER LIBROS CON MAS DE 300 PAGINAS
 function librosLargos(arrayLibros) {
     const arrayLibrosLargos = arrayLibros.filter(l => l.Pages > 300);
 
@@ -112,6 +113,32 @@ document.querySelector(".boton2").addEventListener("click", function () {
     document.querySelector(".libros300").innerHTML = librosLargos(arrayLibros)
 });
 
+//AUTORES Y LIBROS
+function autoresLibros(arrayLibros) {
+    const contadorAutores = {};
+
+    // Recorremos los libros y contamos cada autor
+    arrayLibros.forEach(libro => {
+        const autor = libro.Author;
+        if (contadorAutores[autor]) {
+            contadorAutores[autor]++;
+        } else {
+            contadorAutores[autor] = 1;
+        }
+    });
+
+    // Creamos un array con la información de autor y número de libros
+    const resultado = [];
+    for (const autor in contadorAutores) {
+        resultado.push(autor + ": " + contadorAutores[autor] + " libro(s)");
+    }
+
+    return resultado.join("<br>");
+}
+
+document.querySelector(".boton4").addEventListener("click", function () {
+    document.querySelector(".autoresLibros").innerHTML = autoresLibros(arrayLibros);
+});
 
 // function masDosAños(arrayLibros) {
 //     const fechaActual = new Date();

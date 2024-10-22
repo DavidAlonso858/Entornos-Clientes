@@ -1,4 +1,4 @@
-let pillarDiv = document.querySelectorAll("div > p");
+let pillarDiv = document.querySelectorAll("p");
 let pillarEnlaces = document.querySelectorAll("a");
 let contador = 0;
 let contador2 = 0;

@@ -5,10 +5,13 @@ function coloresTabla(colores) {
     let contador = 0;
 
     for (const ele of pillarTabla) {
-        if (contador < colores.length) {
-            ele.style.backgroundColor = colores[contador];
-            contador++;
+        if (contador == colores.length) {
+            contador = 0;
+            console.log(contador);
+
         }
+        ele.style.backgroundColor = colores[contador];
+        contador++;
     }
 }
 

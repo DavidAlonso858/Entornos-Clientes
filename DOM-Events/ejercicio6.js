@@ -10,6 +10,9 @@ function tablaindicada(columnas, filas, altoCelda, anchoCelda) {
             columna = document.createElement("td");
             columna.style.width = anchoCelda;
             columna.style.height = altoCelda;
+            if (j % 2 == 0) { // Ejercicio 7 (pares de las columnas que a ojo humano son impares)
+                columna.style.backgroundColor = "blue";
+            }
             fila.appendChild(columna);
         }
     }
@@ -18,4 +21,4 @@ function tablaindicada(columnas, filas, altoCelda, anchoCelda) {
 
 }
 
-document.querySelector(".tablaLocura").append(tablaindicada(4, 6, "100px", "300px"));
+tablaindicada(4, 6, "100px", "300px");

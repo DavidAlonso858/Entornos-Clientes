@@ -10,29 +10,29 @@
 
 <body>
     <h1>FORMULARIO PERSONAL</h1>
-    <form method="post">
+    <form id="formularioPersonal" method="post">
         <label for="nombre">Nombre: </label>
-        <input type="text" id="nombre" name="nombre">
+        <input type="text" id="nombre" name="nombre" required>
         <br>
         <br>
 
         <label for="apellido">Primer Apellido: </label>
-        <input type="text" id="apellido" name="apellido">
+        <input type="text" id="apellido" name="apellido" required>
         <br>
         <br>
 
         <label for="apellido2">Segundo Apellido: </label>
-        <input type="text" id="apellido2" name="apellido2">
+        <input type="text" id="apellido2" name="apellido2" required>
 
         <br>
         <br>
         <label for="DNI">DNI: </label>
-        <input type="text" id="dni" name="dni">
+        <input type="text" id="dni" name="dni" required>
         <br>
         <br>
 
         <label for="contraseña">Contraseña: </label>
-        <input type="password" id="password" name="password">
+        <input type="password" id="password" name="password" required>
         <br>
         <br>
 
@@ -48,12 +48,12 @@
         <br>
         <br>
 
-        <label for="sexo">Sexo: </label>
+        <label>Sexo: </label>
         <br>
-        <input type="radio" name="sexo" id="sexo">
-        <label for="hombre"> Hombre </label>
-        <input type="radio" name="sexo2" id="sexo2">
-        <label for="mujer"> Mujer </label>
+        <input type="radio" name="sexo" id="sexo1" value="hombre">
+        <label for="sexo1"> Hombre </label>
+        <input type="radio" name="sexo" id="sexo2" value="mujer">
+        <label for="sexo2"> Mujer </label>
 
         <br>
         <br>
@@ -100,7 +100,7 @@
 
         <br>
         <button type="submit" class="btn btn-primary" id="submitButton">Enviar</button>
-        <input type="reset" value="Reset">
+        <button type="reset" class="btn btn-secundary" id="resetButton">Reset</button>
     </form>
 
     <script src="formulario.js"></script>

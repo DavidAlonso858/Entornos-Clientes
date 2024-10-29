@@ -1,36 +1,20 @@
-const form = document.getElementById('myForm');
+document.getElementById("formularioPersonal").addEventListener("submit", function(event) {
+    // Validación de campos vacíos
+    const nombre = document.getElementById("nombre").value;
+    const apellido = document.getElementById("apellido").value;
+    const dni = document.getElementById("dni").value;
+    const password = document.getElementById("password").value;
 
-form.addEventListener('submit', function (event) {
-    event.preventDefault();
-    let isValid = true;
+    if (!nombre || !apellido || !dni || !password) {
+        alert("Por favor, completa todos los campos obligatorios.");
+        event.preventDefault(); // evita que se envie
+        return;
+    }
 
-    // Validar cada campo del formulario
-    form.querySelectorAll('input, select, textarea').forEach(element => {
-        if (element.value.trim() === '' && element.hasAttribute('required')) {
-            element.classList.add('is-invalid');
-            isValid = false;
-        } else {
-            element.classList.remove('is-invalid');
-        }
-
-        // Validar campos de radio para que al menos uno esté seleccionado
-        if (element.type === 'radio') {
-            const radioGroup = form.querySelectorAll(`input[name="${element.name}"]`);
-            const isRadioGroupValid = Array.from(radioGroup).some(radio => radio.checked);
-            if (!isRadioGroupValid) {
-                radioGroup.forEach(radio => radio.classList.add('is-invalid'));
-                isValid = false;
-            } else {
-                radioGroup.forEach(radio => radio.classList.remove('is-invalid'));
-            }
-        }
-    });
-
-    // Si todos los campos son válidos, enviar el formulario
-    if (isValid) {
-        alert('Formulario enviado correctamente.');
-        form.submit();
-    } else {
-        alert('Por favor, completa todos los campos obligatorios.');
+    // Validación de DNI (formato español, ejemplo: 12345678A)
+    const dniPattern = /^[0-9]{8}[A-Z]$/;
+    if (!dniPattern.test(dni)) {
+        alert("Por favor, introduce un DNI válido en formato 12345678A.");
+        event.preventDefault(); // evita que se envie
     }
 });

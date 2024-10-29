@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta</title>
+</head>
+
+<body>
+    <p>Start typyng in here to take over and try it out</p>
+    <form method="post">
+        <input type="text" name="nombre" id="nombre" minlength="7" pattern="[A-Z]{7,25}"
+            title="LETRAS EN MAYUSCULA"><!--Contener al menos 7-->
+        <input type="text" name="numero" id="numero" minlength="19" maxlength="19" value="XXXX XXXX XXXX XXXX">
+
+
+        <input type="text" name="fecha" id="fecha" value="11/11">
+
+        <input type="text" name="seguridad" id="seguridad" minlength="3" maxlength="3" value="XXX">
+        
+        <input type="number" name="cantidad" id="cantidad" value="00.00">
+        
+        <br>
+        <br>
+        <button style="background-color: rgb(0, 55, 128); color: white;"  type="submit" class="btn-primary" id="submitButton">Submit</button>
+    </form>
+    
+<script src="tarjeta.js"></script>
+</body>
+
+</html>

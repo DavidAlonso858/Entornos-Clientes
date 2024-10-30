@@ -1,13 +1,30 @@
 /* 
 convertir a mayuscula cuando pierde el foco(blur)
 */
-document.querySelector("#nombre").addEventListener("blur", function () {
+
+function nombre() {
     const cambioNombre = document.querySelector("#nombre");
     cambioNombre.value = cambioNombre.value.toUpperCase()
 
-})
+    if (cambioNombre.value.length < 7) {
+        alert("minimo 7 caracteres");
+    }
+    let valor = cambioNombre.value;
+    let contador = 0;
+    for (let index = 0; index < valor.length; index++) {
+        console.log('p');
+        if (valor.charAt[index] === ' ') {
 
-document.querySelector("#numero").addEventListener("keydown", function () {
+            contador++;
+        }
+    }
+
+    if (contador == 0) {
+        alert("Debes poner un apellido al menos");
+    }
+}
+
+function formatoTarjeta() {
     const numeroTarjeta = document.querySelector("#numero");
     console.log(typeof numeroTarjeta.value);
 
@@ -22,8 +39,9 @@ document.querySelector("#numero").addEventListener("keydown", function () {
     }
 
     numeroTarjeta.value = valorBueno;
-})
-document.querySelector("#cantidad").addEventListener("blur", function () {
+}
+
+function cantidad() {
     const cantidadAlmacenada = document.querySelector("#cantidad");
 
     let valor = cantidadAlmacenada.value;
@@ -35,15 +53,30 @@ document.querySelector("#cantidad").addEventListener("blur", function () {
         nuevoValor = valor.replace(',', '.');
 
     } else {
-        nuevoValor += ".00"
+        nuevoValor = valor
+        nuevoValor += ".00";
     }
 
     cantidadAlmacenada.value = nuevoValor;
+}
+
+document.querySelector("#fecha").addEventListener("keydown", function () {
+    const fecha = document.querySelector("#fecha");
+
+    let fechavalor = fecha.value;
+   
+    if (fechavalor.length > 2) {
+        fechavalor = fechavalor.slice(0, 2) + '/' + fechavalor.slice(2);
+    }
+
 })
 
+document.querySelector("#submitButton").addEventListener("click", nombre);
+document.querySelector("#submitButton").addEventListener("click", formatoTarjeta);
+document.querySelector("#submitButton").addEventListener("click", cantidad);
 
 
-
+/* Destacar focus*/
 document.querySelector("#nombre").addEventListener("focus", function () {
     let cambio = document.querySelector("#nombre")
     cambio.style.backgroundColor = "yellow";
@@ -61,5 +94,9 @@ document.querySelector("#fecha").addEventListener("focus", function () {
 
 document.querySelector("#seguridad").addEventListener("focus", function () {
     let cambio = document.querySelector("#seguridad")
+    cambio.style.backgroundColor = "yellow";
+})
+document.querySelector("#cantidad").addEventListener("focus", function () {
+    let cambio = document.querySelector("#cantidad")
     cambio.style.backgroundColor = "yellow";
 })

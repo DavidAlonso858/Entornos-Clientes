@@ -14,7 +14,7 @@ function nombre() {
     for (let index = 0; index < valor.length; index++) {
         console.log('p');
         if (valor.charAt[index] === ' ') {
-
+            
             contador++;
         }
     }
@@ -59,20 +59,17 @@ function cantidad() {
 
     cantidadAlmacenada.value = nuevoValor;
 }
-
-document.querySelector("#fecha").addEventListener("keydown", function () {
-    const fecha = document.querySelector("#fecha");
-
-    let fechavalor = fecha.value;
-   
-    if (fechavalor.length > 2) {
-        fechavalor = fechavalor.slice(0, 2) + '/' + fechavalor.slice(2);
+function fecha() {
+    const fechaActual = Date.now();
+    const fechaIntro = new Date(document.querySelector("#fecha").value)
+    if (fechaIntro < fechaActual) {
+        alert(`La fecha debe ser anterior a la actual`);
     }
-
-})
+}
 
 document.querySelector("#submitButton").addEventListener("click", nombre);
 document.querySelector("#submitButton").addEventListener("click", formatoTarjeta);
+document.querySelector("#submitButton").addEventListener("click", fecha);
 document.querySelector("#submitButton").addEventListener("click", cantidad);
 
 

@@ -11,6 +11,14 @@
         label {
             display: flex;
         }
+
+        #añadir {
+            background-color: rgb(185, 236, 185);
+        }
+
+        #quitar {
+            background-color: rgb(235, 183, 183);
+        }
     </style>
 </head>
 
@@ -18,33 +26,99 @@
 
     <form class="container">
         <fieldset>
-            <legend class="fw-bold">Datos de matricula</legend>
+            <legend class="fw-bold fs-5">Datos de matricula</legend>
             <hr class="text-success">
-            <h6>Centro docente en el que se matricula</h6>
+            <p class="fs-6">Centro docente en el que se matricula</p>
             <hr>
             <div class="row mb-4">
                 <div class="col-4">
-                    <label for="provincia">Provincia: <p class="text-danger">*</p></label>
-                    <input type="">
+                    <label for="comunidad">Comunidad: <p class="text-danger">*</p></label>
+                    <select name="comunidad" id="comunidad" class="w-100">
+
+
+                    </select>
                 </div>
                 <div class="col-4">
-                    <label for="provincia">Municipio: <p class="text-danger">*</p></label>
-                    <input type="">
+                    <label for="municipio">Provincia: <p class="text-danger">*</p></label>
+                    <select name="c" id="municipio" class="w-100">
+
+
+                    </select>
                 </div>
                 <div class="col-4">
-                    <label for="provincia">Localidad: <p class="text-danger">*</p></label>
-                    <input type="">
-                </div>
-            </div>
-            
-            <div class="row">
-                <div class="col-12">
-                    <label for="provincia">Centro: <p class="text-danger">*</p></label>
-                    <input type="">
+                    <label for="localidad">Localidad: <p class="text-danger">*</p></label>
+                    <select name="localidad" id="localidad" class="w-100">
+
+                    </select>
                 </div>
             </div>
         </fieldset>
     </form>
+
+    <br>
+
+    <form class="container" novalidate>
+        <fieldset>
+            <legend class="fw-bold fs-6">PERSONAS AUTORIZADAS PARA RECOGER A SU HIJO/A DURANTE EL CURSO 2023/2024
+            </legend>
+            <hr class="text-success">
+            <p class="fs-6">Las personas que a continuacion podrán recoger a su hijo/a durante el curso 2023/2024 de
+                cualquier
+                servicio del centro:</p>
+            <hr>
+            <div class="row">
+                <div class="col-10">
+                    <h5>Persona autorizada</h5>
+                </div>
+                <div class="col-2">
+                    <button id="añadir" class=" text-success">+</button>
+                    <button id="quitar" class="text-danger">-</button>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-4">
+                    <label for="nombre">Nombre: </label>
+                    <input type="text" id="nombre" class="form-control" name="nombre" placeholder="Nombre"
+                        pattern="[a-zA-Z]+" required>
+                    <div class="invalid-feedback">Por favor ingresa tu nombre sin espacios</div>
+                </div>
+                <div class="col-4">
+                    <label for="apellido">Primer apellido: </label>
+                    <input type="text" id="apellido" class="form-control" name="apellido" placeholder="Primer apellido"
+                        pattern="[a-zA-Z]+" required>
+                    <div class="invalid-feedback">Por favor ingresa tu primer apellido sin espacios</div>
+                </div>
+                <div class="col-4">
+                    <label for="apellido2">Segundo apellido:</label>
+                    <input type="text" id="apellido2" class="form-control" name="apellido2"
+                        placeholder="Segundo apellido">
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-4">
+                    <label for="documentacion">Tipo de documentacion</label>
+                    <select id="documentacion" name="documentacion" class="w-100">
+                        <option>NIF</option>
+                        <option>NIE</option>
+                        <option>PASSPORT</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <label for="pasaporte">NIF/NIE/Pasaporte</label>
+                    <input type="text" id="nie" name="nie" class="form-control" placeholder="NIF/NIE/Pasaporte" required
+                        pattern="[0-9]{8}[A-Z]{1}" minlength="9" maxlength="9">
+                    <div class="invalid-feedback">"No cumple el parametro de un DNI"</div>
+                </div>
+                <div class="col-4">
+                    <label for="telefono">Telefono</label>
+                    <input type="text" id="telefono" name="telefono" placeholder="Telefono">
+                </div>
+            </div>
+        </fieldset>
+    </form>
+    <p id="muestraLista">Datoff</p>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

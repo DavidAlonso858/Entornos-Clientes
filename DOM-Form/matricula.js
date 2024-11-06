@@ -1,3 +1,5 @@
+let lista = [];
+let contador = 0;
 document.querySelector("#añadir").addEventListener("click", function () {
     event.preventDefault();
 
@@ -24,7 +26,7 @@ document.querySelector("#añadir").addEventListener("click", function () {
         apellido.classList.remove("is-invalid")
         apellido.classList.add("is-valid");
     }
-    
+
     // Controlo dni
     if (!dni.checkValidity()) {
         dni.classList.add("is-invalid");
@@ -50,39 +52,110 @@ document.querySelector("#añadir").addEventListener("click", function () {
             )
             contador++;
 
-            let listaHTML = "<h6>";
-            lista.forEach(e => {
-                listaHTML += `<p>${e.Nombre}, ${e.Apellido1}, ${e.Apellido2}, ${e.DNI}, ${e.Telefono} </p>`;
-            });
-            listaHTML += "</h6>";
-
+            mostrarLista();
             document.querySelector("h5").innerText = `${contador}º Persona autorizada`;
-            document.querySelector("#muestraLista").innerHTML = listaHTML;
         } else {
             console.log("La lista esta completa");
 
         }
     }
 })
-let lista = [];
-let contador = 0;
+
+
+function añadirComunidad() {
+    const selector = document.querySelector("#comunidad");
+    const ejemplo = document.createElement("option");
+
+    ejemplo.innerHTML = "--Selecciona la comunidad--"
+    selector.appendChild(ejemplo);
+
+    elegirComunidad.forEach(c => {
+
+        const option = document.createElement("option");
+        option.innerHTML = c.label;
+        selector.appendChild(option);
+    }
+    )
+}
+
+añadirComunidad();
+
+function añadirProvincia() {
+
+    const selector = document.querySelector("#comunidad").value;
+    const provincia = document.querySelector("#municipio");
+
+    const comunidad = elegirComunidad.find(c => c.label === selector)
+
+    // uso la comunidad encontrada para almacenar las provincias 
+
+    provincia.innerHTML = ""; // para que se resetee al selecciona otra comunidad
+    if (comunidad) {
+        comunidad.provinces.forEach(c => {
+            const option = document.createElement("option");
+            option.innerHTML = c.label;
+            provincia.appendChild(option);
+        })
+    }
+
+}
+
+function añadirLocalidad() {
+
+    const selectorComunidad = document.querySelector("#comunidad").value; // saco la comunidad
+    const selectorProvincia = document.querySelector("#municipio").value; // saco la provincia
+    const localidad = document.querySelector("#localidad");
+
+    const comunidad = elegirComunidad.find(c => c.label === selectorComunidad)
+
+    const provinciaEncontrada = comunidad.provinces.find(p => p.label === selectorProvincia);
+
+    localidad.innerHTML = ""; // para que se resetee al selecciona otra provincia
+    if (provinciaEncontrada) {
+        provinciaEncontrada.towns.forEach(t => {
+            const option = document.createElement("option");
+            option.innerHTML = t.label;
+            localidad.appendChild(option);
+        })
+    }
+
+}
+
+añadirComunidad();
+document.querySelector("#comunidad").addEventListener("blur", añadirProvincia);
+document.querySelector("#municipio").addEventListener("blur", añadirLocalidad);
+
+
 
 document.querySelector("#quitar").addEventListener("click", function () {
-    if (lista.length > 0) {
+    const Ndocumentacion = document.querySelector("#nie").value;
 
-        lista.pop();
-        contador--
-
-        let listaHTML = "<h6>";
-        lista.forEach(e => {
-            listaHTML += `<p>${e.Nombre}, ${e.Apellido1}, ${e.Apellido2}, ${e.DNI}, ${e.Telefono} </p>`;
-        });
-        listaHTML += "</h6>";
-
-        document.querySelector("h5").innerText = `${contador}º Persona autorizada`;
-        document.querySelector("#muestraLista").innerHTML = listaHTML;
-    } else {
-        alert(`no hay elementos que quitar`);
+    if (Ndocumentacion === "") {
+        alert("Por favor, ingresa el NIF/NIE/Pasaporte de la persona a eliminar.");
+        return;
     }
-})
+
+    const index = lista.findIndex(persona => persona.DNI === Ndocumentacion);
+
+    if (index !== -1) {
+        lista.splice(index, 1);
+        contador--;
+
+        mostrarLista();
+        document.querySelector("h5").innerText = `${contador}º Persona autorizada`;
+        alert("Persona eliminada correctamente.");
+    } else {
+        alert("No se encontró una persona con ese NIF/NIE/Pasaporte.");
+    }
+});
+
+
+function mostrarLista() {
+    let listaHTML = "<h6>";
+    lista.forEach(e => {
+        listaHTML += `<p>${e.Nombre}, ${e.Apellido1}, ${e.Apellido2}, ${e.DNI}, ${e.Telefono} </p>`;
+    });
+    listaHTML += "</h6>";
+    document.querySelector("#muestraLista").innerHTML = listaHTML;
+}
 

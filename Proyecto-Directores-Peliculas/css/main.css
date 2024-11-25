@@ -1,0 +1,77 @@
+body {
+    background: url('86f199d0c6f5cedd14c121164fa5fafc.jpg') no-repeat center center fixed;
+    background-size: cover;
+    /* Para que la imagen se ajuste al tamaño de la pantalla */
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.head1 {
+    /* TITULO*/
+    font-size: 60px;
+    font-weight: bold;
+    background: linear-gradient(to right, #ff0000, #820486, #000000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow:
+        5px 5px 1px rgba(255, 0, 0, 0.9),
+        /* Sombra roja brillante */
+        2px 2px 20px rgba(0, 0, 0, 1);
+    /* Sombra negra profunda */
+}
+
+.head2 {
+    /* CABECERA*/
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(255, 0, 0, 0.7), 1px 1px 10px rgba(0, 0, 0, 0.8);
+}
+
+
+.menu {
+    position: sticky;
+    top: 0;
+    background: linear-gradient(to right, #86041a, #42003d);
+
+    padding: 0px 0px 0px 0px;
+    color: white;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.menu a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.menu-log {
+    right: auto;
+    float: right;
+}
+
+footer {
+    width: 100%;
+    bottom: 0px;
+    background-color: #000;
+    color: #fff;
+    position: fixed;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}

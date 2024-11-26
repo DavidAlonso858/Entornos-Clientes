@@ -56,7 +56,7 @@ let almacenPeliculas = [
         "año": 1960,
         "coordenadas": { "lat": 37.09024, "lon": -95.712891 }, // coordenadas del país de la pelicula
         "premio": true,
-        "idDirector": 3
+        "idDirector": 3,
     },
     {
         "id": 8,

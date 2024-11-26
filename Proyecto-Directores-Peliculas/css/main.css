@@ -2,7 +2,6 @@ body {
     background: url('../images/fondoTerror.jpg') no-repeat center center fixed;
     background-size: cover;
     /* Para que la imagen se ajuste al tamaño de la pantalla */
-    color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -11,6 +10,14 @@ body {
     align-items: center;
     justify-content: center;
 
+}
+
+/* Efecto al pasar el cursor por los botones de director y pelicula */
+.btn:hover {
+    box-shadow: 0 8px 15px rgba(255, 0, 200, 0.6);
+    /* Sombra más intensa */
+    transform: scale(1.5);
+    /* Aumentar ligeramente el tamaño */
 }
 
 .head1 {
@@ -31,10 +38,11 @@ body {
 .head2 {
     /* CABECERA*/
     margin-top: 20px;
-    font-size: 25px;
+    font-size: 26px;
     font-weight: bold;
     color: #fff;
-    text-shadow: 1px 1px 5px rgba(255, 0, 0, 0.7), 1px 1px 10px rgba(0, 0, 0, 0.8);
+    text-shadow: 3px 3px 10px rgba(255, 0, 0, 0.7), 2px 2px 15px rgba(0, 0, 0, 0.8);
+    ;
 }
 
 
@@ -42,7 +50,6 @@ body {
     position: sticky;
     top: 0;
     background: linear-gradient(to right, #86041a, #42003d);
-
     padding: 0px 0px 0px 0px;
     color: white;
     margin: 0 auto;

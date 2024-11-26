@@ -18,12 +18,12 @@
     <header>
         <header>
             <nav class="menu">
-                <a href="index.html"><img src="favicon/pelicula-de-terror.png" alt="icono" width="45px" height="37px"> HOME</a>
-                <a href="src/director/listaDirectores.html"><i class="bi bi-camera-reels-fill"></i> Directores</a>
-                <a href="src/pelicula/listaPeliculas.html"><i class="bi bi-film"></i>
+                <a class="fw-bold" href="index.html"><img src="favicon/pelicula-de-terror.png" alt="icono" width="45px" height="37px"> HOME</a>
+                <a class="fw-bold" href="src/director/listaDirectores.html"><i class="bi bi-camera-reels-fill"></i> Directores</a>
+                <a class="fw-bold" href="src/pelicula/listaPeliculas.html"><i class="bi bi-film"></i>
                     Peliculas</a>
                 <div class="menu-log">
-                    <a href="${pageContext.request.contextPath}/tienda/usuarios/"><i class="bi bi-door-open"></i> LOGIN</a>
+                    <a class="text-white" href="${pageContext.request.contextPath}/tienda/usuarios/"><i class="bi bi-door-open"></i> LOGIN</a>
                 </div>
             </nav>
             <div class="head1 text-center">NightmareBox</div>
@@ -36,9 +36,9 @@
 
     <main>
         <div class="d-grid gap-2 p-5" style="margin: 100px 100px 360px 100px" id="contenedor">
-            <a class="btn btn-dark btn-lg"
-                href="<%=application.getContextPath()%>/tienda/fabricantes">DIRECTORES</a>
-            <a class="btn btn-danger btn-lg" href="<%=application.getContextPath()%>/tienda/productos">PELICULAS</a>
+            <a class="btn btn-dark btn-lg mb-2"
+                href="./src/director/listaDirectores.html">DIRECTORES</a>
+            <a class="btn btn-danger btn-lg" href="./src/pelicula/listaPeliculas.html">PELICULAS</a>
         </div>
     </main>
 

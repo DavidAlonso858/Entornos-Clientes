@@ -19,7 +19,9 @@ body {
     transform: scale(1.5);
     /* Aumentar ligeramente el tamaño */
 }
-
+.nav1:hover{
+    font-weight: bold;
+}
 .head1 {
     /* TITULO*/
     font-size: 80px;

@@ -14,6 +14,7 @@ let almacenPeliculas = [
         "año": 1986,
         "coordenadas": { "lat": 37.09024, "lon": -95.712891 }, // coordenadas del país de la pelicula
         "premio": true,
+        "imagen": "../../images/Pearl.jpg",
         "idDirector": 1
     },
     {
@@ -31,6 +32,7 @@ let almacenPeliculas = [
         "año": 2022,
         "coordenadas": { "lat": 37.09024, "lon": -95.712891 }, // coordenadas del país de la pelicula
         "premio": true,
+        "imagen": "../../images/Pearl.jpg",
         "idDirector": 2
     },
     {

@@ -6,6 +6,7 @@ let almacenPeliculas = [
         "año": 1988,
         "coordenadas": { "lat": 56.130366, "lon": -106.346771 }, // coordenadas del país de la pelicula
         "premio": true,
+        "imagen": "../../images/Dead.jpg",
         "idDirector": 1
     },
     {
@@ -14,7 +15,7 @@ let almacenPeliculas = [
         "año": 1986,
         "coordenadas": { "lat": 37.09024, "lon": -95.712891 }, // coordenadas del país de la pelicula
         "premio": true,
-        "imagen": "../../images/Pearl.jpg",
+        "imagen": "../../images/TheFly.jpg",
         "idDirector": 1
     },
     {
@@ -23,6 +24,7 @@ let almacenPeliculas = [
         "año": 1983,
         "coordenadas": { "lat": 56.130366, "lon": -106.346771 }, // coordenadas del país de la pelicula
         "premio": true,
+        "imagen": "../../images/VideoDrome.jpg",
         "idDirector": 1
     },
     // Peliculas de Ti West
@@ -41,6 +43,7 @@ let almacenPeliculas = [
         "año": 2022,
         "coordenadas": { "lat": 37.09024, "lon": -95.712891 }, // coordenadas del país de la pelicula
         "premio": true,
+        "imagen": "../../images/X.jpg",
         "idDirector": 2
     },
     {
@@ -49,6 +52,7 @@ let almacenPeliculas = [
         "año": 2024,
         "coordenadas": { "lat": 37.09024, "lon": -95.712891 }, // coordenadas del país de la pelicula
         "premio": false,
+        "imagen": "../../images/Maxxine.jpg",
         "idDirector": 2
     },
     // Peliculas de Alfred
@@ -58,6 +62,7 @@ let almacenPeliculas = [
         "año": 1960,
         "coordenadas": { "lat": 37.09024, "lon": -95.712891 }, // coordenadas del país de la pelicula
         "premio": true,
+        "imagen": "../../images/Psicosis.jpg",
         "idDirector": 3,
     },
     {
@@ -66,6 +71,7 @@ let almacenPeliculas = [
         "año": 1963,
         "coordenadas": { "lat": 37.09024, "lon": -95.712891 }, // coordenadas del país de la pelicula
         "premio": true,
+        "imagen": "../../images/TheBirds.jpg",
         "idDirector": 3
     },
     {
@@ -74,6 +80,7 @@ let almacenPeliculas = [
         "año": 1972,
         "coordenadas": { "lat": 55.378051, "lon": -3.435973 }, // coordenadas del país de la pelicula
         "premio": true,
+        "imagen": "../../images/Frenzy.jpg",
         "idDirector": 3
     },
     // Peliculas de Paco Plaza
@@ -83,6 +90,7 @@ let almacenPeliculas = [
         "año": 2007,
         "coordenadas": { "lat": 40.463667, "lon": -3.74922 }, // coordenadas del país de la pelicula (Este es España)
         "premio": true,
+        "imagen": "../../images/REC.jpg",
         "idDirector": 4
     },
     {
@@ -91,6 +99,7 @@ let almacenPeliculas = [
         "año": 2017,
         "coordenadas": { "lat": 40.463667, "lon": -3.74922 }, // coordenadas del país de la pelicula
         "premio": true,
+        "imagen": "../../images/Veronica.jpg",
         "idDirector": 4
     },
     {
@@ -99,6 +108,7 @@ let almacenPeliculas = [
         "año": 2021,
         "coordenadas": { "lat": 40.463667, "lon": -3.74922 }, // coordenadas del país de la pelicula
         "premio": true,
+        "imagen": "../../images/LaAbuela.jpg",
         "idDirector": 4
     },
     // Peliculas de Guillermo del Toro
@@ -108,6 +118,7 @@ let almacenPeliculas = [
         "año": 2006,
         "coordenadas": { "lat": 40.463667, "lon": -3.74922 }, // coordenadas del país de la pelicula (Este es España)
         "premio": true,
+        "imagen": "../../images/Fauno.jpg",
         "idDirector": 5
     },
     {
@@ -116,6 +127,7 @@ let almacenPeliculas = [
         "año": 1993,
         "coordenadas": { "lat": 23.634501, "lon": -102.552784 }, // coordenadas del país de la pelicula
         "premio": true,
+        "imagen": "../../images/Cronos.jpg",
         "idDirector": 5
     },
     {
@@ -124,6 +136,7 @@ let almacenPeliculas = [
         "año": 2001,
         "coordenadas": { "lat": 40.463667, "lon": -3.74922 }, // coordenadas del país de la pelicula
         "premio": true,
+        "imagen": "../../images/EspinazoDiablo.jpg",
         "idDirector": 5
     },
     // Peliculas de James Wan
@@ -133,6 +146,7 @@ let almacenPeliculas = [
         "año": 2004,
         "coordenadas": { "lat": 37.09024, "lon": -95.712891 }, // coordenadas del país de la pelicula (Este es España)
         "premio": true,
+        "imagen": "../../images/SAW.jpg",
         "idDirector": 6
     },
     {
@@ -141,6 +155,7 @@ let almacenPeliculas = [
         "año": 2013,
         "coordenadas": { "lat": 37.09024, "lon": -95.712891 }, // coordenadas del país de la pelicula
         "premio": true,
+        "imagen": "../../images/Conjruing.jpg",
         "idDirector": 6
     },
     {
@@ -149,6 +164,7 @@ let almacenPeliculas = [
         "año": 2021,
         "coordenadas": { "lat": 37.09024, "lon": -95.712891 }, // coordenadas del país de la pelicula
         "premio": false,
+        "imagen": "../../images/Malignant.jpg",
         "idDirector": 6
     },
 ]

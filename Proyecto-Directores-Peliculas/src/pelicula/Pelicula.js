@@ -32,10 +32,10 @@ function meterImagen() {
         // Guardo los datos a parte de la imagen del JSON
         const texto = document.createElement("div");
         // el booleano del premio lo paso a si o no 
-        texto.innerHTML = `<strong>Nombre:</strong> ${im.titulo} <br> <strong>Año:</strong> ${im.año}  <br> <strong>Premios:</strong> ${im.premio === true ? `Sí` : `No`}  
+        texto.innerHTML = `<strong>Título:</strong> ${im.titulo} <br> <strong>Año:</strong> ${im.año}  <br> <strong>Premios:</strong> ${im.premio === true ? `Sí` : `No`}  
         <br><strong> País:</strong>
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52816169.558200695!2d-161.49265223136007!3d36.102185713814805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sEstados%20Unidos!5e0!3m2!1ses!2ses!4v1732828075211!5m2!1ses!2ses" width="200" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
-        // He intentado convertir las coordenadas pero para poder usar la api de google maps me pedia la tarjeta y tampoco sabia muy bien aplicarlo
+        // HE INTENTADO CONVERTIR LAS COORDENADAS QUE TENGO EN EL JSON pero para poder usar la api de google maps me pedia la tarjeta y tampoco sabia muy bien aplicarlo
         texto.style.fontSize = "16px";
         texto.style.color = "aliceblue";
         texto.style.marginLeft = "10px";

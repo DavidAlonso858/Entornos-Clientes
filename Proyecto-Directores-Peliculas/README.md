@@ -5,15 +5,15 @@ Este proyecto es una aplicacion web que sirve para gestionar a diferentes direct
 > INFORMACION
 1. He creado la estructura del proyecto (más adelante se complementará la parte de la capa Servlet, DAO y Model)
 
-2. Esta parte del proyecto ha servido para crear las vistas (**index.html, /src/director/listaDirectores.html, /src/pelicula/listaPeliculas.html**)
+2. Esta parte del proyecto ha servido para crear las vistas (`**index.html, /src/director/listaDirectores.html, /src/pelicula/listaPeliculas.html**`)
 
-3. Los json de los que obtengo la información alamacenada de cada entidad (##/assests/directores.js,/assests/peliculas.js**)
+3. Los json de los que obtengo la información alamacenada de cada entidad (/assests/directores.js,/assests/peliculas.js**)
 
 4. Los JS con los que trabajo para poder crear el contenido del main de las vistas con los datos pasado del json (/src/director/Director.js, /src/pelicula/Pelicula.js)
 
 >EJECUCION
 
-  -Abrir el index.html con el live server o ejecutando npx live-server dentro de la carpeta del proyecto
+  - Abrir el index.html con el live server o ejecutando npx live-server dentro de la carpeta del proyecto
 
 
 >ANOTACIONES

@@ -17,6 +17,7 @@ Este proyecto es una aplicacion web que sirve para gestionar a diferentes direct
 
 
 >ANOTACIONES
+Todas las imagenes de los directores y peliculas están almacenadas en el JSON al igual que los demás datos que muestro, en el apartado de peliculas hay un filtro por directores basandome en el ejercicio de continentes.
 
 He intentado mostrar las coordenadas del json para que muestre un mapa en cada una pero la única manera que he encontrado es con la API de google maps y, como pongo en el comentario dentro de Pelicula.js, me pedía la tarjeta para habilitarla y tampoco sabía muy bien usarla.
 

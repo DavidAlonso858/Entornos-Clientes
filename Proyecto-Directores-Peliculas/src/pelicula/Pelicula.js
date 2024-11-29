@@ -55,3 +55,21 @@ function meterImagen() {
     });
 }
 meterImagen();
+
+function filtroSelect() {
+    const select = document.querySelector("#Directores");
+    const option = document.createElement("option");
+
+    option.innerHTML = "--Selecciona Director--";
+    select.appendChild(option);
+    // un option por cada nombre de director del json
+    almacenDirectores.forEach(im => {
+        const option = document.createElement("option");
+
+        option.innerHTML = im.nombre;
+        select.appendChild(option);
+    })
+
+}
+filtroSelect();
+

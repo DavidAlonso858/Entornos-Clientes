@@ -61,6 +61,7 @@ img:hover {
     /* Sombra más intensa */
     transform: scale(1.5);
     /* Aumentar ligeramente el tamaño */
+    font-weight: bold;
 }
 
 footer {

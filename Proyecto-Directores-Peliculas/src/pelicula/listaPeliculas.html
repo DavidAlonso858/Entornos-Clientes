@@ -16,12 +16,19 @@
     <header>
         <a href="../../index.html"><img src="../../favicon/pelicula-de-terror.png" alt="icono"
                 class="img border mt-2 border-2 border-danger rounded-1" width="45px" height="37px"></a>
-      
-                <a href="./crearPelicula.html" id="boton"  class="d-flex justify-content-end">
-                    <button type="submit"
-                        class="btn btn-warning">
-                        Crear
-                    </button></a>
+
+        <div class="d-flex justify-content-end align-items-center mt-3">
+            <a href="./crearPelicula.html" id="boton">
+                <button type="submit" class="btn btn-warning me-2">
+                    Crear
+                </button>
+            </a>
+            <div id="selectDirector">
+                <select name="Directores" id="Directores" class="fw-bold">
+
+                </select>
+            </div>
+        </div>
 
         <div class="head1 text-center">Peliculas</div>
         <div class="head2 text-center">Algunas de las obras más reconocibles de los directores aportados en esta
@@ -32,7 +39,7 @@
 
     <main>
 
-
+<!--Añado del js-->
 
 
     </main>
@@ -53,8 +60,8 @@
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
 
-    <script src="../../assests/peliculas.js"></script>
-    <script src="../../assests/directores.js"></script>
+        <script src="../../assests/peliculas.js"></script>
+        <script src="../../assests/directores.js"></script>
     <script src="Pelicula.js"></script>
 </body>
 

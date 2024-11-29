@@ -5,7 +5,7 @@ Este proyecto es una aplicacion web que sirve para gestionar a diferentes direct
 > INFORMACION
 1. He creado la estructura del proyecto (más adelante se complementará la parte de la capa Servlet, DAO y Model)
 
-2. Esta parte del proyecto ha servido para crear las vistas (`index.html, /src/director/listaDirectores.html, /src/pelicula/listaPeliculas.html`)
+2. Esta parte del proyecto ha servido para crear las vistas (`index.html, /src/director/listaDirectores.html, /src/pelicula/listaPeliculas.html, /src/pelicula/crearPeliculas.html, /src/director/crearDirectores.html`)
 
 3. Los json de los que obtengo la información almacenada de cada entidad (`/assests/directores.js,/assests/peliculas.js**`)
 
@@ -17,6 +17,8 @@ Este proyecto es una aplicacion web que sirve para gestionar a diferentes direct
 
 
 >ANOTACIONES
+
+Se ven todas las instancias de las dos entidades guardadas en el JSON (los ubicados en la carpeta assests) y con el select en pelicula puedes ver las intancias secundarias relacionadas con la princial (Las Peliculas de un Director)
 
 Todas las imagenes de los directores y peliculas están almacenadas en el JSON al igual que los demás datos que muestro, en el apartado de peliculas hay un filtro por directores basandome en el ejercicio de continentes.
 

@@ -31,8 +31,10 @@ body {
     color: #000000;
     text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.7), 1px 1px 10px rgba(255, 255, 255, 0.8);
 }
+
 main {
-    padding-bottom: 100px; /* Espacio adicional bajo el contenido */
+    padding-bottom: 100px;
+    /* Espacio adicional bajo el contenido */
 }
 
 img {
@@ -43,8 +45,16 @@ img {
     /* Efecto suave en el cambio de borde */
 }
 
-img:hover{
+img:hover {
     border: 5px solid #ff0000;
+}
+
+#boton {
+    text-decoration: none;
+}
+
+.btn{
+    margin-right: 50px;
 }
 
 footer {

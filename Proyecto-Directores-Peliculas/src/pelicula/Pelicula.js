@@ -1,11 +1,48 @@
 // LO HAGO DE ESTA FORMA POR SI TRABAJAMOS LUEGO EN LA INSERCION DE DATOS EN EL JSON
 
-function meterImagen() {
+function filtroSelect() {
+    const select = document.querySelector("#Directores");
+    const option = document.createElement("option");
+
+    option.innerHTML = "--Selecciona Director--";
+    select.appendChild(option);
+    // un option por cada nombre de director del json
+    almacenDirectores.forEach(im => {
+        const option = document.createElement("option");
+
+        option.innerHTML = im.nombre;
+        option.value = im.id;
+        select.appendChild(option);
+    });
+
+
+}
+
+filtroSelect();
+
+document.querySelector("#Directores").addEventListener("click", function () {
+    const select = document.querySelector("#Directores");
+    const selectedDirectorId = parseInt(select.value); // Obtener el ID del director seleccionado
+    if (!selectedDirectorId) {
+        meterImagen();
+    } else {
+
+        const peliculasFiltradas = almacenPeliculas.filter(
+            pelicula => pelicula.idDirector === selectedDirectorId
+        );
+        meterImagen(peliculasFiltradas); // Actualizar la vista
+    }
+
+})
+
+// si no se le pasa salen todas de forma predefinida
+function meterImagen(peliculasFiltradas = almacenPeliculas) {
     const main = document.querySelector("main"); // Meto el contenido del json en el main
+    main.innerHTML = ""; // para que no se acumule con el filtro de directores
     let contador = 0;
     let contenedorActual;
 
-    almacenPeliculas.forEach(im => {
+    peliculasFiltradas.forEach(im => {
         // Creo una nueva fila cada 3 columnas
         if (contador % 3 === 0) {
             contenedorActual = document.createElement("div");
@@ -56,20 +93,5 @@ function meterImagen() {
 }
 meterImagen();
 
-function filtroSelect() {
-    const select = document.querySelector("#Directores");
-    const option = document.createElement("option");
 
-    option.innerHTML = "--Selecciona Director--";
-    select.appendChild(option);
-    // un option por cada nombre de director del json
-    almacenDirectores.forEach(im => {
-        const option = document.createElement("option");
-
-        option.innerHTML = im.nombre;
-        select.appendChild(option);
-    })
-
-}
-filtroSelect();
 

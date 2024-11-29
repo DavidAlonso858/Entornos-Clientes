@@ -22,15 +22,15 @@ filtroSelect();
 
 document.querySelector("#Directores").addEventListener("click", function () {
     const select = document.querySelector("#Directores");
-    const selectedDirectorId = parseInt(select.value); // Obtener el ID del director seleccionado
+    const selectedDirectorId = parseInt(select.value); // guardo la id almacenada en el value del option (la paso a int porque el value lo transforma en string)
+
     if (!selectedDirectorId) {
         meterImagen();
     } else {
-
         const peliculasFiltradas = almacenPeliculas.filter(
             pelicula => pelicula.idDirector === selectedDirectorId
         );
-        meterImagen(peliculasFiltradas); // Actualizar la vista
+        meterImagen(peliculasFiltradas); // hago la vista solo con el array de las peliculas de ese director
     }
 
 })

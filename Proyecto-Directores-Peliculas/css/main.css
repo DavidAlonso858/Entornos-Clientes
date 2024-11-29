@@ -19,9 +19,11 @@ body {
     transform: scale(1.5);
     /* Aumentar ligeramente el tamaño */
 }
-.nav1:hover{
+
+.nav1:hover {
     font-weight: bold;
 }
+
 .head1 {
     /* TITULO*/
     font-size: 80px;
@@ -70,6 +72,23 @@ body {
 .menu-log {
     right: auto;
     float: right;
+}
+
+.my-4 input,
+.my-4 label {
+    font-size: 18px;
+
+    margin-left: 75px;
+}
+
+form {
+    padding: 100px;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.my-4 label {
+    font-weight: bold;
 }
 
 footer {

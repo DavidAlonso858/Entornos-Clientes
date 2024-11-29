@@ -56,7 +56,12 @@ img:hover {
 .btn{
     margin-right: 50px;
 }
-
+.btn:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
+    /* Sombra más intensa */
+    transform: scale(1.5);
+    /* Aumentar ligeramente el tamaño */
+}
 footer {
     width: 100%;
     bottom: 0px;

@@ -9,3 +9,8 @@ console.log(list2);
 console.log(list5);
 
 //El index of busca elementos y el findindex te busca con las condiciones que tu pases
+
+
+// Usando findIndex para buscar una cadena que contenga "Ad"
+const indexOfStringAd = list.findIndex(e => typeof e === "string" && e.includes("Ad"));
+console.log("Índice de la cadena que contiene 'Ad':", indexOfStringAd); // 5

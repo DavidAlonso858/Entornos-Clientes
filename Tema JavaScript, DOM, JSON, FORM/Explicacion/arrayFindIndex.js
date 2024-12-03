@@ -5,7 +5,7 @@ let list5 = list.findIndex(e => e === 4);
 
 console.log(typeof list2);
 console.log(list2);
-// devuelve el indice donde se encuentra el primer elemento que cumple esa funcion
+// devuelve el indice donde se encuentra el primer elemento que cumple esa funcionkf
 console.log(list5);
 
 //El index of busca elementos y el findindex te busca con las condiciones que tu pases

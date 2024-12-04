@@ -95,9 +95,12 @@ function busquedaTitulo() {
     const cuerpo = document.querySelector("#cuerpo");
     const valor2 = valorTexto.value.trim().toLowerCase();
 
-    cuerpo.innerHTML = "";
-
     const busqueda = pelis.filter(p => p.Title.toLowerCase().includes(valor2));
+    // numero busqueda
+    const parrafo = document.createElement("p")
+    parrafo.className = "m-5 fw-bold"
+    parrafo.innerHTML = busqueda.length;
+    cuerpo.appendChild(parrafo);
 
     if (busqueda) {
         busqueda.forEach(b => {
@@ -139,10 +142,14 @@ function busquedaDirector() {
     const cuerpo = document.querySelector("#cuerpo");
     const valor2 = valorTexto.value.trim().toLowerCase();
 
-    cuerpo.innerHTML = "";
+
 
     const busqueda = pelis.filter(p => p.Director.toLowerCase().includes(valor2));
-
+    // numero busqueda
+    const parrafo = document.createElement("p")
+    parrafo.className = "m-5 fw-bold"
+    parrafo.innerHTML = busqueda.length;
+    cuerpo.appendChild(parrafo);
     if (busqueda) {
         busqueda.forEach(b => {
             const div = document.createElement("div");
@@ -184,10 +191,13 @@ function busquedaActores() {
     const cuerpo = document.querySelector("#cuerpo");
     const valor2 = valorTexto.value.trim().toLowerCase();
 
-    cuerpo.innerHTML = "";
 
     const busqueda = pelis.filter(p => p.Actors.toLowerCase().includes(valor2));
-
+    // numero busqueda
+    const parrafo = document.createElement("p")
+    parrafo.className = "m-5 fw-bold"
+    parrafo.innerHTML = busqueda.length;
+    cuerpo.appendChild(parrafo);
     if (busqueda) {
         busqueda.forEach(b => {
             const div = document.createElement("div");
@@ -278,14 +288,18 @@ document.querySelector("#boton").addEventListener("click", function () {
     const valorTitulo = document.querySelector("#title").checked;
     const valorDirector = document.querySelector("#director").checked;
     const valorActor = document.querySelector("#actors").checked;
+    const cuerpo = document.querySelector("#cuerpo");
 
     if (!valorTitulo && !valorDirector && !valorActor) {
         busquedaGeneral();
-    } else if (valorTitulo) {
-        busquedaTitulo();
-    } else if (valorDirector) {
-        busquedaDirector();
-    } else if (valorActor) {
-        busquedaActores();
+    } else {
+
+        if (valorTitulo) {
+            busquedaTitulo();
+        } if (valorDirector) {
+            busquedaDirector();
+        } if (valorActor) {
+            busquedaActores();
+        }
     }
 })

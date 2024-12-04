@@ -67,24 +67,34 @@ function añadirPaises() {
     })
 }
 
-function añadirAño() {
-    const valor = document.querySelector("#year");
+function MostrarAnno() {
+    const yearSelect1 = document.querySelector("#year");
+    const yearSelect2 = document.querySelector("#year2");
 
-    let año = [];
+    let year2020 = new Date();
+    year2020.setFullYear(2000);
 
-    año.forEach(c => {
-        año.push(c.Year);
-    })
-    año.sort();
+    let yearNow = new Date();
 
-    año.forEach(p => {
-        const option = document.createElement("option");
-        option.innerHTML = p;
+    let ListaAnno = [];
 
-        valor.appendChild(option)
-    })
+    for (let fecha = new Date(year2020); fecha.getFullYear() <= yearNow.getFullYear(); fecha.setFullYear(fecha.getFullYear() + 1)) {
+        ListaAnno.push(new Date(fecha));
+    }
+
+    ListaAnno.forEach(anno => {
+        const annoOption1 = document.createElement("option");
+        annoOption1.innerHTML = anno.getFullYear();
+        annoOption1.value = anno.getFullYear();
+        const annoOption2 = document.createElement("option");
+        annoOption2.innerHTML = anno.getFullYear();
+        annoOption2.value = anno.getFullYear();
+
+        yearSelect1.appendChild(annoOption1);
+        yearSelect2.appendChild(annoOption2);
+    });
 }
-añadirAño();
+MostrarAnno()
 añadirPaises()
 
 

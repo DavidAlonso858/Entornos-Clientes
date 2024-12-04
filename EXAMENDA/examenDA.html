@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+</head>
+
+<body>
+    <header>
+
+        <h4 class="bg-primary text-white">David Alonso Garcia</h4>
+    </header>
+
+    <!--hidden para desabilitar boton-->
+    <main>
+        <form class="container mt-4 border shadow mb-4">
+            <fieldset>
+                <legend>ADVANCED SEARCH</legend>
+                <!--INTRODUCIR DATO-->
+                <label for="text">Text:</label><br>
+                
+                <input type="text" id="texto" class="w-25 mb-2" required>
+                <br>
+                <!--TITULO, DIRECTORES, ACTORES-->
+                <input type="checkbox" id="title">
+                <label for="title">Title</label>
+
+                <input type="checkbox" id="director" value="director">
+                <label for="director">Director</label>
+
+                <input type="checkbox" id="actors" value="actors">
+                <label for="actors">Actors</label>
+                <br>
+
+
+                <label for="country">Country: </label>
+                <!--PAISES-->
+                <!--PAISES-->
+                <br>
+                <select name="country" id="country">
+
+
+                </select>
+
+                <br>
+
+                <label for="genders">Genders: </label>
+                <!--GENEROS-->
+                <div class="row">
+                    <div class="col-12" id="meterGeneros">
+                        <input type="checkbox" id="allgenders" value="allgenders">
+                        <label for="allgenders">All genders</label>
+                    </div>
+                </div>
+                <br>
+
+
+                <!--AÑO-->
+                <label for="year">Year:from</label>
+                <select name="year" id="year">
+                    <option>- - - -</option>
+                </select>
+
+                <br>
+                <!--BOTON-->
+                <input type="submit" value="Find" id="boton" class="bg-primary text-white">
+
+            </fieldset>
+        </form>
+
+        <div id="cuerpo">
+
+
+        </div>
+
+    </main>
+
+
+
+
+
+    <footer>
+
+    </footer>
+
+
+
+    <script src=" https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="filtrospelis.js"></script>
+    <script src="pelisList.js"></script>
+    <script src="examenDA.js"></script>
+</body>
+
+</html>

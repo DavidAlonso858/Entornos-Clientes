@@ -300,10 +300,10 @@ document.querySelector("#boton").addEventListener("click", function () {
     const valorActor = document.querySelector("#actors").checked;
     const cuerpo = document.querySelector("#cuerpo");
 
+    cuerpo.innerHTML = "";
     if (!valorTitulo && !valorDirector && !valorActor) {
         busquedaGeneral();
     } else {
-
         if (valorTitulo) {
             busquedaTitulo();
         } if (valorDirector) {

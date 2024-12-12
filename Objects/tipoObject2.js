@@ -67,5 +67,6 @@ function muestraPorTipo(p) {
 
     formu.appendChild(boton);
 }
-
-muestraPorTipo(person);
+window.onload = () => {
+    muestraPorTipo(person);
+}

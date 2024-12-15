@@ -105,7 +105,7 @@ function crearElementoCarrito(product, numProd) {
         if (cantidad > 1) {
             cantidad--;
             cantidadEl.textContent = cantidad;
-
+            
             // Actualizar subtotal y total acumulado
             const nuevoSub = product.precio;
             totalDelTotal -= nuevoSub;
@@ -115,6 +115,8 @@ function crearElementoCarrito(product, numProd) {
 
     document.getElementById(`eliminar${product.nombre}`).addEventListener("click", () => {
         const tr = document.getElementById(`tr${product.nombre}`);
+        const cantidadEl = document.getElementById(`${product.nombre}cant`);
+        let cantidad = parseInt(cantidadEl.textContent);
         const nuevoSub = product.precio * cantidad;
 
         // Restar subtotal al total acumulado

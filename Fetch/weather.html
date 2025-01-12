@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,58 +11,17 @@
 		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 		crossorigin="anonymous"></script>
 </head>
-<body class="p-5">
-	<form>
-		<h2>Weather Report</h2>
+
+<body>
+	<form class="border border-shadow p-5 m-3">
+		<h2>David's Weather</h2>
 		<label for="ciudad">Introduce una ciudad</label>
-		<input class="form-control mt-2 mb-3 w-25" type="text" id="ciudad">
+		<input class="form-control mt-2 mb-3 w-50" type="text" id="ciudad">
 		<button class="btn btn-primary" id="send">Enviar</button>
 	</form>
 	<div class="p-5 fs-5" id="res"></div>
 
-	<script>
-		document.querySelector("form").addEventListener("submit", (e) => {
-			e.preventDefault();
-
-			const q = document.querySelector("#ciudad").value;
-			if (!q) {
-				alert("Introduce una ciudad");
-				location.reload();
-			}
-			const url = `http://api.weatherapi.com/v1/current.json?key=d4a32557eacb4f72afe90501250801&q=${q}&aqi=no`;
-			const res = document.querySelector("#res");
-
-			async function weatherReport() {
-				await fetch(url)
-				.then(response => {
-					if (response.ok) {
-						return response.json();
-					} else {
-						return response.json().then(res => {
-							throw new Error(response.status + ": " + res.error.message);
-						})
-					}
-				})
-				.then(data => {
-					let weather = data;
-					console.log(weather);
-
-					let img = weather.current.condition.icon;
-					let nombre = weather.location.name;
-					let temp = weather.current.temp_c;
-					let hum = weather.current.humidity;
-
-					res.classList.remove("text-danger");
-					res.innerHTML = `<img src="${img}"> ${nombre}, ${temp}ºC, ${hum}% de humedad`;					
-				})
-				.catch(error => {
-					res.classList.add("text-danger");
-					// res.innerHTML = "No es una ciudad válida";
-					res.innerHTML = error;
-				})
-			}
-			weatherReport();
-		})
-	</script>
+	<script src="weather.js"></script>
 </body>
+
 </html>

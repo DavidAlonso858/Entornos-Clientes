@@ -6,30 +6,12 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-<header>
-  <div class="d-flex">
-    <div class="bg-secondary p-3 m-3 w-25">
-      <h3>Exercices</h3>
-      <hr>
-      <ul class="lista">
-        <li><a class="p-2 text-decoration-none text-white" href="#">Exercise 1</a></li>
-        <li><a class="p-2 text-decoration-none text-white" href="#">Exercise 2</a></li>
-        <li><a class="p-2 text-decoration-none text-white" href="#">Exercise 3</a></li>
-        <li><a class="p-2 text-decoration-none text-white" href="#">Exercise 4</a></li>
-        <li><a class="p-2 text-decoration-none text-white" href="#">Exercise 5</a></li>
-        <li><a class="p-2 text-decoration-none text-white" href="#">Exercise 6</a></li>
-        <li><a class="p-2 text-decoration-none text-white" href="#">Exercise 7</a></li>
-        <li><a class="p-2 text-decoration-none text-white" href="#">Exercise 8</a></li>
-        <li><a class="p-2 text-decoration-none text-white" href="#">Exercise 9</a></li>
-        <li><a class="p-2 text-decoration-none text-white" href="#">Exercise 10</a></li>
-      </ul>
-    </div>
-
-    <div class="p-3 m-3 w-75 bg-secondary">
-      <h2>DWEC</h2>
-      <h3>Angular exercises</h3>
-      <app-ex02></app-ex02>
+  
+  <header >
+    <div class="d-flex">
+      <app-header></app-header>
+      <div class="bg-secondary p-3 m-3 w-75">
+      <router-outlet></router-outlet>
     </div>
   </div>
 </header>

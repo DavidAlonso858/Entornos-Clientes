@@ -1,4 +1,11 @@
 <h1>Exercice 3</h1>
 <p>
-  Random between 1 and 10: {{ n }}
+  Random between 1 and 10: 
 </p>
+<h2 [ngClass]="{
+  'text-danger': n < 5,
+  'text-primary': n >= 9,
+  'text-success': n >= 5 && n < 9
+}">
+  {{n}}
+</h2>

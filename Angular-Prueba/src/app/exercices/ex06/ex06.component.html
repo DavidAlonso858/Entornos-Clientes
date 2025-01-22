@@ -2,12 +2,12 @@
 <h2>Fahrenheit/Celsius conversion</h2>
 
 Celcius:
-<input [(ngModel)]="celcius" type="number" (blur)="converToFahrenheit()" required #celciusInput = "ngModel"
+<input [(ngModel)]="celcius" type="number" (input)="converToFahrenheit()" required #celciusInput = "ngModel"
 [ngClass]="{'ngInvalid': celciusInput.invalid}"/>
 <br>
 
 Fahrenheit:
-<input [(ngModel)]="fahrenheit" type="number" (blur)="convertToCelcius()" required #fahrenheitInput="ngModel"
+<input [(ngModel)]="fahrenheit" type="number" (input)="convertToCelcius()" required #fahrenheitInput="ngModel"
     [ngClass]="{'ngInvalid': fahrenheitInput.invalid}" />
 <br>
 

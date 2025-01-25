@@ -1,3 +1,7 @@
+window.onload = () => {
+    muestraPorTipo(person);
+}
+
 const person = {
     "nombre": "Noon",
     "edad": 6,
@@ -69,5 +73,3 @@ function muestraPorTipo(p) {
 
     formu.appendChild(boton);
 }
-
-muestraPorTipo(person);

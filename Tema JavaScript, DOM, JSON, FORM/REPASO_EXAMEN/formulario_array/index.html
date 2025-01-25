@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulario y Arrays</title>
 </head>
+
 <body>
   <h1>Formulario de Usuarios</h1>
   <form id="userForm">
@@ -17,6 +19,26 @@
     <label for="age">Edad:</label>
     <input type="number" id="age" name="age"><br>
 
+    <label>
+      <input type="checkbox" id="subscribe" name="subscribe">
+      ¿Suscribirse al boletín?
+    </label><br>
+
+    <p>Selecciona tu género:</p>
+    <label>
+      <input type="radio" id="male" name="gender" value="male">
+      Masculino
+    </label><br>
+    <label>
+      <input type="radio" id="female" name="gender" value="female">
+      Femenino
+    </label><br>
+    <label>
+      <input type="radio" id="other" name="gender" value="other">
+      Otro
+    </label><br>
+    <br>
+    
     <button type="submit">Agregar Usuario</button>
   </form>
 
@@ -31,4 +53,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>

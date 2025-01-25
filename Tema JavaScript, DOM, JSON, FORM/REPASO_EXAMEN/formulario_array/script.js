@@ -1,48 +1,45 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const userForm = document.getElementById("userForm");
-    const userList = document.getElementById("userList");
-    const searchInput = document.getElementById("search");
-    const searchResults = document.getElementById("searchResults");
-    const errorsDiv = document.getElementById("errors");
+    const userForm = document.querySelector("#userForm");
+    const userList = document.querySelector("#userList");
+    const searchInput = document.querySelector("#search");
+    const searchResults = document.querySelector("#searchResults");
+    const errorsDiv = document.querySelector("#errors");
   
-    let users = []; // Array para guardar los usuarios
+    let users = []; 
   
-    // Valida y maneja el envío del formulario
     userForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      errorsDiv.textContent = ""; // Limpia errores previos
+      errorsDiv.textContent = ""; 
   
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const age = document.getElementById("age").value.trim();
+      const name = document.querySelector("#name").value.trim();
+      const email = document.querySelector("#email").value.trim();
+      const age = document.querySelector("#age").value.trim();
+      const gender = document.querySelector('input[name="gender"]:checked');
+      console.log(typeof age);
   
-      // Validación básica
       const errors = [];
       if (!name) errors.push("El nombre es obligatorio.");
       if (!email || !email.includes("@")) errors.push("El correo no es válido.");
       if (!age || isNaN(age) || Number(age) <= 0) errors.push("La edad debe ser un número mayor a 0.");
-  
+      if (!gender) errors.push("Debes seleccionar un género.");
+
       if (errors.length > 0) {
         errorsDiv.textContent = errors.join(" ");
         return;
       }
   
-      // Agregar usuario al array
-      users.push({ name, email, age: Number(age) });
+      users.push({ name, email, age: Number(age), gender: gender.value });
   
-      // Actualizar la lista de usuarios
       renderUserList();
-      userForm.reset(); // Limpia el formulario
+      userForm.reset(); 
     });
   
-    // Renderiza la lista de usuarios
     function renderUserList() {
       userList.innerHTML = users
-        .map((user) => `<li>${user.name} - ${user.email} - ${user.age} años</li>`)
+        .map((user) => `<li>${user.name} - ${user.email} - ${user.age} años - Género: ${user.gender}</li>`)
         .join("");
     }
   
-    // Maneja la búsqueda
     searchInput.addEventListener("input", () => {
       const query = searchInput.value.toLowerCase().trim();
       const filteredUsers = users.filter((user) =>
@@ -50,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
       );
   
       searchResults.innerHTML = filteredUsers
-        .map((user) => `<li>${user.name} - ${user.email} - ${user.age} años</li>`)
+        .map((user) => `<li>${user.name} - ${user.email} - ${user.age} años - Género: ${user.gender}</li>`)
         .join("");
     });
   });

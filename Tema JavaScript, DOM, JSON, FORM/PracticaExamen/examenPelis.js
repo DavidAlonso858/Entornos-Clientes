@@ -166,6 +166,7 @@ function busquedaGeneral() {
 
             const botonActualizar = document.createElement("button");
             botonActualizar.textContent = "Update";
+
             botonActualizar.addEventListener("click", () => {
                 const nuevoRating = parseFloat(inputRating.value);
                 if (nuevoRating >= 0 && nuevoRating <= 10) {
@@ -181,6 +182,7 @@ function busquedaGeneral() {
 
             const botonCerrar = document.createElement("button");
             botonCerrar.textContent = "Close details";
+            
             botonCerrar.addEventListener("click", () => {
                 detallesPeli.style.display = "none";
                 boton.disabled = false;
@@ -200,6 +202,7 @@ function busquedaGeneral() {
 
             cuerpo.appendChild(div);
         });
+        
     } else {
         const vacio = document.createElement("p");
         vacio.innerHTML = "No se encontraron resultados.";

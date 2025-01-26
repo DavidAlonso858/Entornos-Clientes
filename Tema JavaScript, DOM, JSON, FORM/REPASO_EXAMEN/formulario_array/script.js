@@ -17,15 +17,15 @@ document.addEventListener("DOMContentLoaded", () => {
       const gender = document.querySelector('input[name="gender"]:checked');
       console.log(typeof age);
   
-      const errors = [];
+      const errors = []; // hago una rray para almacenar errores
       if (!name) errors.push("El nombre es obligatorio.");
       if (!email || !email.includes("@")) errors.push("El correo no es válido.");
       if (!age || isNaN(age) || Number(age) <= 0) errors.push("La edad debe ser un número mayor a 0.");
       if (!gender) errors.push("Debes seleccionar un género.");
 
-      if (errors.length > 0) {
+      if (errors.length > 0) { // luego lo convierton con un join 
         errorsDiv.textContent = errors.join(" ");
-        return;
+        return; // el return para que no avance el form
       }
   
       users.push({ name, email, age: Number(age), gender: gender.value });

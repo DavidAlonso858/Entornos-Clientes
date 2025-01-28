@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const people = [
         { name: "Jon", surname: "Doe", age: 12, alive: true, editCount: 0 },
         { name: "Jane", surname: "Done", age: 3, alive: true, editCount: 0 },
-        { name: "Foo", surname: "Bar", age: 33, alive: false, editCount: 0 }
+        { name: "Foo", surname: "Bar", age: 33, alive: false, editCount: 0 } // no se puede mofificar mas de 5 veces por eso el editCount
     ];
     
     const table = document.querySelector("tbody");

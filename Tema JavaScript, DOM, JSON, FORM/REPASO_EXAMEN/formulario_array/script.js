@@ -15,6 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const email = document.querySelector("#email").value.trim();
       const age = document.querySelector("#age").value.trim();
       const gender = document.querySelector('input[name="gender"]:checked');
+      console.log(gender);
+      
       console.log(typeof age);
   
       const errors = []; // hago una rray para almacenar errores

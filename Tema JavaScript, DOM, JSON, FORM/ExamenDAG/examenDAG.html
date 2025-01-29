@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Examen</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <style>
+        #addTar {
+            color: white;
+            background-color: red;
+        }
+
+        #updateTar {
+            color: black;
+            background-color: yellow;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+</head>
+
+<body>
+    <header class="bg-primary text-white">
+        <h4>David Alonso Garcia</h4>
+    </header>
+
+    <main>
+        <button type="button" style="color: blueviolet;" id="consola">Mostrar Consola tareas</button>
+        <br>
+        <br>
+        <div id="datos">
+
+        </div>
+
+        <form class="container" id="tarForm">
+            <label>
+                Titulo
+                <input type="text" minlength="10" maxlength="50" id="Titulo" placeholder="Titulo Tarea" required />
+            </label>
+
+            <label>
+                Fecha de Vencimiento
+                <input type="date" id="fechVen" required />
+            </label>
+
+            <p>Selecciona el estado:</p>
+            <label>
+                <input type="radio" id="bajo" name="estado" value="baja">
+                Baja
+            </label><br>
+            <label>
+                <input type="radio" id="media" name="estado" value="media">
+                Media
+            </label><br>
+            <label>
+                <input type="radio" id="alta" name="estado" value="alta">
+                Alta
+            </label>
+            <br>
+            <br>
+
+            <button type="button" id="addTar">Agregar Tarea</button>
+            <button type="button" id="updateTar" style="display: none;">Actualizar Tarea</button>
+            <br>
+            <br>
+
+            <label style="display: none;" id="marcar">
+                <input type="checkbox" id="tareaMarcado" name="tareaMarcado" value="true">
+                ¿Has completado la tarea?
+            </label>
+            <br>
+        </form>
+
+
+        <p class="error" style="color: red;" id="error"></p>
+
+        <h2>Lista de Tareas</h2>
+        <table class="table table striped" id="tarTable">
+            <thead>
+                <tr>
+                    <th>Titulo</th>
+                    <th>fecha Vencimiento</th>
+                    <th>Completado</th>
+                    <th>Creacion</th>
+                    <th>prioridad</th>
+                </tr>
+            </thead>
+
+            <tbody id="tarBody">
+
+            </tbody>
+        </table>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="datos.js"></script>
+    <script src="examenDAG.js"></script>
+
+</body>
+
+</html>
